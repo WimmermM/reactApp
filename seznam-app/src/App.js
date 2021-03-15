@@ -1,23 +1,34 @@
 import './App.css';
-import React from 'react';
+import React,{Fragment} from 'react';
 import Card from './Components/Card';
-import CardDetail from './Components/CardDetail'
+import CardParams from './Components/CardParams'      
+import CardModal from './Components/CardModal';
 
 function App() {
   return (
-    <div className='App'>
-          {CardDetail.map((detail) => {
-                       <Card 
-                       title={detail.title}
-                       body={detail.body}
-                       parametrs={detail.parametrs}
-                       imageUrl={detail.imageUrl}
-                       alt={detail.alt}
-                       />
+          <div className='App'>
+          {CardParams.map((detail) => {
+                return(
+                  <Fragment>
+                  <Card 
+                  title={detail.title}
+                  body={detail.body}
+                  parametrs={detail.parametrs}
+                  imageUrl={detail.imageUrl}
+                  alt={detail.alt}
+                  />
+                  </Fragment>
+                )
           })}
-
-    </div>
+          <Fragment>
+                <CardModal>
+                  teset
+                </CardModal>
+          </Fragment>
+          </div>
   );
+
+
 }
 
 export default App;

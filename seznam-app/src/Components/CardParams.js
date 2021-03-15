@@ -1,12 +1,13 @@
-export default CardDetail [
+const CardDetail = [
     {
         title:'Test',
         body:'Test body trosku delsi',
-        parametrs:'sdasd',
+        parametrs:'Parametry',
         imageUrl:'/images/1.png',
-        alt:'2',
+        alt:'1',
         rating:'2',
-
+        price:'55156',
+        shops:'Shops'
     },
     {
         title:'Test',
@@ -70,5 +71,7 @@ export default CardDetail [
         parametrs:'sdasd',
         imageUrl:'/images/10.png',
         alt:'10'
-    }
+    },
 ]
+
+export default CardDetail;
