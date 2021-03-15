@@ -1,15 +1,21 @@
 import './App.css';
 import React from 'react';
 import Card from './Components/Card';
+import CardDetail from './Components/CardDetail'
 
 function App() {
   return (
-    <div className="App">
-      <Card 
-      title='Card Title'
-      imageUrl=''
-      body='sdasduhnasd'
-      />
+    <div className='App'>
+          {CardDetail.map((detail) => {
+                       <Card 
+                       title={detail.title}
+                       body={detail.body}
+                       parametrs={detail.parametrs}
+                       imageUrl={detail.imageUrl}
+                       alt={detail.alt}
+                       />
+          })}
+
     </div>
   );
 }
